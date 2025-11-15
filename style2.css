@@ -1,0 +1,162 @@
+/* Import a modern font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --primary-color: #4A90E2;
+    --secondary-color: #FFC107;
+    --background-light: #F4F7F6;
+    --card-background: #FFFFFF;
+    --text-dark: #333333;
+    --text-light: #666666;
+    --error-color: #D32F2F;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #70cdf9 0%, #25abbd 100%); /* Light Blue Gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: var(--text-dark);
+}
+
+.container {
+    background: var(--card-background);
+    padding: 30px;
+    border-radius: 20px; /* More rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Deeper shadow for 3D effect */
+    text-align: center;
+    width: 350px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: translateY(-5px); /* Subtle lift effect on hover */
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box; /* Include padding in width calculation */
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
+
+/* Button Group Styling */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+button {
+    width: 48%; /* Adjusted for two buttons */
+    padding: 10px 0;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #3C7DCF;
+}
+
+button:active {
+    transform: scale(0.98); /* Click effect */
+}
+
+.trends-btn {
+    background-color: var(--secondary-color);
+}
+
+.trends-btn:hover {
+    background-color: #FBC02D;
+}
+
+/* Weather Display Box Styling */
+.weather-box {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05); /* Inner shadow for slight depression */
+    text-align: left;
+}
+
+#weatherBox {
+    background: #2eafda; /* Very light blue for current conditionsboxxxxxxxx */
+}
+
+.trends-box {
+    background: #fff3e0; /* Light orange/cream for historical data */
+    margin-top: 15px;
+    border-left: 5px solid var(--secondary-color); /* Accent border */
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.weather-box h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.weather-box img {
+    width: 70px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.weather-box p {
+    margin: 5px 0;
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: 3px;
+    color: var(--text-light);
+}
+
+.weather-box p strong {
+    color: var(--text-dark);
+}
+
+.trends-box h3 {
+    text-align: center;
+    color: var(--secondary-color);
+    font-weight: 600;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 8px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.trend-day {
+    list-style: none; /* Remove bullet points */
+    padding: 8px 0;
+    margin-bottom: 0;
+    font-size: 0.9em;
+}
+
+.error {
+    color: var(--error-color);
+    margin-top: 10px;
+    font-weight: 600;
+}
